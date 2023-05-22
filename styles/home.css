@@ -42,14 +42,12 @@
 }
 
 #nav > li > a {
-    /* text-transform: uppercase; */
     line-height: var(--height__header);
 }
 
 #nav > li:hover > a,
 #nav .subnav li:hover {
     background-color: #ccc;
-    /* border-radius: 12px;     */
 }
 
 #nav li:hover .subnav {
@@ -83,9 +81,6 @@
     float: right;
     margin-top: 15px;
     margin-right: 40px;
-    /* position: absolute;
-    top: 15px;
-    right: 40px; */
 }
 
 #header .lst-btn li {
@@ -154,5 +149,29 @@
 }
 
 .section--staff {
-    min-height: 400px;
+    position: relative;
+    /* min-height: 224px; */
+}
+
+#main .section--staff .content-everyday {
+    font-size: 28px;
+    font-weight: 600;
+    padding-left: 260px;
+    padding-top: 68px;
+}
+
+.section--staff .content-birthDay {
+    display: flex;
+    align-items: center;
+    height: 224px;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.section--staff .content-birthDay p {
+    width: 440px;
+    padding: 32px;
+    border: 1px solid #000;
+    border-radius: 16px;
+    font-weight: 600;
 }
