@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../assets/fonts-icon/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
     <!-- <link rel="stylesheet" href="../assets/fonts-icon/themify-icons-font/themify-icons/themify-icons.css"> -->
 </head>
-<body>
+<body onload="showContent()">
     <div id="main">
         <div id="header">
             <!-- Begin: nav -->
@@ -41,7 +41,6 @@
                     </a></li>
                 </ul>
             <!-- Begin: button -->
-
         </div>
 
         <div class="section--company">
@@ -55,9 +54,24 @@
             <img class="img-company" src="../assets/img/company-section.jpg" alt="">
         </div>
 
-        <div class="section--staff">
+        <div class="section--staff" >
+            <p class="content-everyday">
+                Xin chào <span class="user-name"></span><br>
+                Hôm nay của bạn như thế nào?<br> 
+                Hãy chuẩn bị cho một ngày làm việc năng suất nhé!
+            </p>
 
+            <div class="content-birthDay" style="display: none;" >
+                <img src="../assets/img/birthday-home-page.jpg" alt="Bánh kem">
+                <p>
+                    Chúc mừng sinh nhật <span class="user-name"></span>!
+                    Chúc bạn một tuổi mới nhiều sức khỏe và thành công!
+                    Quý công ty vô cùng trân trọng những cống hiến của bạn! 
+                </p>
+            </div>
         </div>
     </div>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
