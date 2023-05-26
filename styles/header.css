@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+    --height__header: 52px;
+}
+
+/* Begin: header */
+
+#header {
+    height: var(--height__header);
+    background-color: #546E7A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#nav {
+    position: absolute;
+    left: 40px;
+}
+
+#nav li {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+#nav li a {
+    color: #263238;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#nav > li > a {
+    line-height: var(--height__header);
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover {
+    background-color: #ccc;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .nav-arrow-down {
+    font-size: 12px;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    background-color: #ECEFF1;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+}
+
+#nav .subnav li {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #687f89;
+}
+
+.subnav li a {
+    line-height: 40px; 
+}
+
+#header .lst-btn {
+    float: right;
+    margin-top: 15px;
+    margin-right: 40px;
+}
+
+#header .lst-btn li {
+    display: inline-block;
+}
+
+.lst-btn li a {
+    color: #263238;
+    padding: 0 8px;
+    font-size: 18px;
+}
+
+.lst-btn li:hover a {
+    color: #ccc !important;
+}
+
+#header .user-icon {
+    /* background-color: #ECEFF1;
+    border-radius: 50%; */
+}
+
+#header .user-icon a {
+    font-size: 12px;
+    background-color: #ECEFF1;
+    border-radius: 50%;
+    padding: 4px 8px;
+}
+
+.lst-btn .user-icon:hover a {
+    background-color: #000 !important;
+}
+/* End: header */
