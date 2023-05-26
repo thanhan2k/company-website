@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
     <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../assets/fonts-icon/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
     <!-- <link rel="stylesheet" href="../assets/fonts-icon/themify-icons-font/themify-icons/themify-icons.css"> -->
 </head>
 <body onload="showContent()">
     <div id="main">
+        <!-- Start: header -->
         <div id="header">
             <!-- Begin: nav -->
             <ul id="nav">
-                <li><a href="">Hồ sơ</a></li>
+                <li><a href="./profile.html">Hồ sơ</a></li>
                 <li><a href="">Thông báo</a></li>
                 <li>
                     <a href="">
@@ -33,19 +35,21 @@
             <!-- Begin: button -->
 
                 <ul class="lst-btn">
-                    <li class="home-icon"><a href="" title="Trang chủ">
+                    <li class="home-icon"><a href="./home.html" title="Trang chủ">
                         <i class="fa-solid fa-house"></i>
                     </a></li>
                     <li class="logout-icon"><a href="./login.html" title="Đăng xuất">
                         <i class="fa-solid fa-right-from-bracket"></i>
                     </a></li>
-                    <li class="user-icon"><a href="" title="Hồ sơ">
+                    <li class="user-icon"><a href="./profile.html" title="Hồ sơ">
                         <i class="fa-solid fa-user"></i>
                     </a></li>
                 </ul>
             <!-- End: button -->
 
         </div>
+        <!-- End: header -->
+
 
         <div class="section--company">
             <div class="content">
@@ -58,8 +62,8 @@
             <img class="img-company" src="../assets/img/company-section.jpg" alt="">
         </div>
 
-        <div class="section--staff" >
-            <p class="content-everyday">
+        <div class="section--user" >
+            <p class="content-everyday" style="display: none;">
                 Xin chào <span class="user-name"></span><br>
                 Hôm nay của bạn như thế nào?<br> 
                 Hãy chuẩn bị cho một ngày làm việc năng suất nhé!
@@ -76,6 +80,6 @@
         </div>
     </div>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/home.js"></script>
 </body>
 </html>
