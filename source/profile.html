@@ -57,29 +57,20 @@
             <!-- Strart: personal details -->
             <div class="personal-details">
                 <img src="../assets/img/profile-avt.jpg" alt="">
-                <div class="personal-content">
-                    <ul>
-                        <li>Họ và tên: Nguyễn Văn A </li>
-                        <li>Ngày sinh: 01/01/1990</li>
-                        <li>Giới tính: Nam</li>
-                        <li>Phòng ban: Nhân sự</li>
-                        <li>Ngày bắt đầu làm việc: 01/01/2023</li>
-                        <li>Chức vụ: Nhân viên quản lý</li>
-                    </ul>
-                </div>
+                <div class="personal-content js-personal-content"></div>
             </div>
             <!-- End: personal details -->
 
             <!-- Strart: personal description -->
             <div class="personal-description">
-                <div class="experience-section description-content">
+                <div class="experience-section js-experience-section description-content">
                     <h3>Kinh nghiệm</h3>
                     <ul class="experience-list">
                         <li>Kinh nghiệm 5 năm làm việc trong ngành quản lý nhân sự</li>
                     </ul>
                 </div>
 
-                <div class="achievements-section description-content">
+                <div class="achievement-section js-achievement-section description-content">
                     <h3>Thành tích</h3>
                     <ul class="achievement-list">
                         <li>Nhân viên xuất sắc quý 2 năm 2023 </li>
@@ -88,24 +79,19 @@
                     </ul>
                 </div>
 
-                <div class="social-links description-content">
+                <div class="social-links js-social-links description-content">
                     <h3>Liên kết ngoài</h3>
-                    <ul>
-                        <li>Email: nguyenvana@gmail.com </li>
-                        <li>Facebook: facebook:/nguyenvana</li>
-                        <li>Linkin: nguyenvana</li>
-                    </ul>
+
                 </div>
             </div>
             <!-- End: personal description -->
         </div>
-        <button class="btn-edit js-btn-edit">
-            <i class="fa-solid fa-pen"></i>
-        </button>
-        <!-- start: Edit button -->
     </div>
-
-    <div class="modal js-modal">
+    <button class="btn-edit js-btn-edit">
+        <i class="fa-solid fa-pen"></i>
+    </button>
+    <!-- Start: Edit modal -->
+    <div class="modal js-edit-modal">
         <div class="modal-container">
             <div class="modal-closeBtn js-modal-closeBtn">
                 <i class="fa-sharp fa-regular fa-circle-xmark"></i>
@@ -142,18 +128,18 @@
                 </div>
                 <div class="modal-social-link">
                     <label for="modal-linkedIn" class="modal-label">LinkedIn:</label>
-                    <input type="text" id="modal-linkedIn">
+                    <input type="text" id="modal-linkedin">
                 </div>
                 <button class="modal-saveBtn js-modal-saveBtn">
                     <i class="fa-regular fa-floppy-disk"></i>
                 </button>
             </div>
-
-            
         </div>
     </div>
+    <!-- End: modal -->
 
     <script src="./js/profile.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
