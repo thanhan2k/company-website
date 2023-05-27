@@ -1,26 +1,26 @@
 
-// let employee = {
-//     userName: "an123",
-//     password: "123456",
-//     fullName: "Tô Thành An",
-//     birthdate: new Date("2000-09-12"),
-//     gender: "Nam",
-//     department: "B6.10",
-//     startDate: new Date("2023-01-01"),
-//     position: "Developer",
-//     experience: '',
-//     achievement: '',
-//     socialLink: {
-//     email: 'to.thanhan2k@gmail.com',
-//         facebook: 'fb.com',
-//         LinkedIn: 'https://www.linkedin.com/',
-//     },
-// }
+let employee = {
+    userName: "an123",
+    password: "123456",
+    fullName: "Tô Thành An",
+    birthdate: new Date("2000-09-12"),
+    gender: "Nam",
+    department: "B6.10",
+    startDate: new Date("2023-01-01"),
+    position: "Developer",
+    experience: '',
+    achievement: '',
+    socialLink: {
+    email: 'to.thanhan2k@gmail.com',
+        facebook: 'fb.com',
+        LinkedIn: 'https://www.linkedin.com/',
+    },
+}
 
-// let employees = [];
-// employees.push(employee);
+let employees = [];
+employees.push(employee);
 
-// localStorage.setItem('employees', JSON.stringify(employees))
+localStorage.setItem('employees', JSON.stringify(employees))
 
 
 function redirectPage() {
