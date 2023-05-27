@@ -10,7 +10,7 @@
 //     position: "Developer",
 //     experience: '',
 //     achievement: '',
-//     socialLink: {
+//     socialLinks: {
 //     email: 'to.thanhan2k@gmail.com',
 //         facebook: 'fb.com',
 //         LinkedIn: 'https://www.linkedin.com/',
