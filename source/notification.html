@@ -141,14 +141,63 @@
                 </div>
             </div>
             <div class="position-relative col-2">
-                <div class="position-relative class-plus" style="background-color: #FFFFFFFF;margin: 250px 0 0 150px;">
-                    <button class=" fa-solid fa-plus" style="height: 70px;width: 70px;border-radius: 35px"></button>
+                <div class="position-relative class-plus js-addBtn" style="background-color: #FFFFFFFF;margin: 250px 0 0 150px;">
+                    <button class="fa-solid fa-plus" style="height: 70px;width: 70px;border-radius: 35px"></button>
                 </div>
             </div>
             
         </div>
         
     </div>
+    <div class="modal js-modal">
+        <div class="modal-container">
+            <div>
+                <div class="modal-closeBtn js-modal-closeBtn">
+                    <i class="fa-sharp fa-regular fa-circle-xmark"></i>
+                </div>
+            </div>
+            <h1>Thông báo</h1>
+            <div class="containter">
+                <div class="notify-detail">
+                    <div>
+                        <p>Tiêu đề</p>
+                        <textarea class="notify-header"></textarea>
+                    </div>
+                    <div>
+                        <p>Nội dung</p>
+                        <textarea class="notify-content"></textarea>
+                    </div>
+                    <div>
+                        <p>Tệp đính kèm</p>
+                        <textarea class="notify-attachment"></textarea>
+                    </div>
+                </div>
+                <div class="notify-type-receive">
+                    <div>
+                        <p>Phân loại</p>
+                        <select>
+                            <option selected>Loại thông báo</option>
+                            <option>Thông báo chung</option>
+                            <option>Thông báo riêng</option>
+                        </select>
+                    </div>
+                    <div style="margin-top: 150px;">
+                        <p>Nơi nhận</p>
+                        <select>
+                            <option selected>Chọn nơi nhận</option>
+                            <option>Phòng hành chính</option>
+                            <option>Phòng nhân sự</option>
+                            <option>Giám đốc</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button class="modal-saveBtn js-modal-saveBtn">
+                <i class="fa-regular fa-floppy-disk"></i>
+            </button>
+        </div>
+    </div>
+    <script src="../source/js/notification.js"></script>
     <script >
         $(document).ready(function () {
     var itemsMainDiv = ('.MultiCarousel');
