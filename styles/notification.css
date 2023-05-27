@@ -39,7 +39,6 @@
 }
 
 .class-plus{
-    
     right: 30px;
     bottom: 50px;
     background-color: aliceblue;
@@ -149,4 +148,88 @@
 .lst-btn .user-icon:hover a {
     background-color: #000 !important;
 }
-/* End: header */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    display: none;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 12px;
+}
+.modal-container {
+    background: #fff;
+    width: 1200px;
+    min-height: 300px;
+}
+
+h1 {
+    margin: 25px 0 0 50px;
+    font-weight: 800;
+}
+.modal-closeBtn {
+    float: right;
+    padding: 12px 16px;
+    font-size: 32px;
+    cursor: pointer;
+}
+.modal-saveBtn {
+    float: right;
+    margin-bottom: 24px;
+    margin-right: 28px;
+    padding: 12px 16px;
+    font-size: 24px;
+    border-radius: 100px;
+    background: #B0BEC5;
+    border: none;
+}
+.modal-saveBtn:hover {
+    opacity: 0.8;
+}
+textarea {
+    background: #ECEFF1;    
+    border: 2px solid #546E7A;
+    font-size: 20px;
+    margin-top: 10px;
+    resize: none;
+}
+select {
+    width: 300px;
+    height: 50px;
+    background: #ECEFF1;    
+    border: 2px solid #546E7A;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.notify-detail, .notify-type-receive {
+    margin-left: 50px;
+    margin-top: 25px;
+}
+p {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.notify-header {
+    width: 500px;
+    height: 40px;
+}
+.notify-content {
+    width: 500px;
+    height: 100px;
+}
+.notify-attachment {
+    width: 500px;
+    height: 100px;
+}
+.containter {
+    display: flex;
+    gap: 150px;
+}
+.open {
+    display: flex;
+}
