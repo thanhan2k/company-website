@@ -1,0 +1,115 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    display: none;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.modal-container {
+    background: #fff;
+    width: 800px;
+    min-height: 300px;
+}
+
+.modal-closeBtn {
+    float: right;
+    padding: 12px 16px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.modal-closeBtn:hover i {
+    color: rgb(193, 9, 9);
+}
+
+.modal-header {
+    display: inline-block;
+    padding: 12px 36px;
+}
+
+.modal-body {
+    padding: 16px 16px 0px 16px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4px;
+}
+
+.modal-body .modal--body__left {
+    flex: 2;
+    margin-left: 48px;
+    padding: 4px;
+}
+
+.modal-body .modal--body__right {
+    flex: 2;
+}
+
+.modal-body .modal-label {
+    display: block;
+    padding: 4px 0px;
+}
+
+ input[type="text"] {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    /* loại bỏ đường viền xung quanh ô input khi được focus */
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+input[type="radio"] {
+    margin: 12px;
+}
+
+
+.modal--body__right .content-experiences {
+    width: 340px;
+    min-height: 160px;
+    border: 2px solid #546E7A;
+    background: #ECEFF1;
+    text-indent: 8px;
+    font-size: 20px;
+}
+
+.modal-footer {
+    padding: 0px 16px;
+    margin-left: 52px;
+}
+
+.modal-footer .modal-social-link {
+    padding: 4px;
+    margin-left: 16px;
+    /* display: inline-block; */
+}
+
+.modal-saveBtn {
+    float: right;
+    margin-bottom: 24px;
+    margin-right: 28px;
+    padding: 12px 16px;
+    font-size: 24px;
+    border-radius: 100px;
+    background: #B0BEC5;
+    border: none;
+}
+
+.modal-saveBtn:hover {
+    opacity: 0.8;
+}
+
+h4 {
+    margin-bottom: 12px;
+}
+
+.open {
+    display: flex;
+}
+
