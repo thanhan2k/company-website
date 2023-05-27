@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hồ sơ</title>
     <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/modal.css">
     <link rel="stylesheet" href="../styles/profile.css">
     <link rel="stylesheet"
         href="../assets/fonts-icon/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
@@ -75,8 +76,6 @@
                     <h3>Kinh nghiệm</h3>
                     <ul class="experience-list">
                         <li>Kinh nghiệm 5 năm làm việc trong ngành quản lý nhân sự</li>
-                        <li>Kinh nghiệm 5 năm làm việc trong ngành quản lý nhân sự</li>
-                        <li>Kinh nghiệm 5 năm làm việc trong ngành quản lý nhân sự</li>
                     </ul>
                 </div>
 
@@ -100,11 +99,61 @@
             </div>
             <!-- End: personal description -->
         </div>
-        <button class="btn-edit">
+        <button class="btn-edit js-btn-edit">
             <i class="fa-solid fa-pen"></i>
         </button>
         <!-- start: Edit button -->
     </div>
+
+    <div class="modal js-modal">
+        <div class="modal-container">
+            <div class="modal-closeBtn js-modal-closeBtn">
+                <i class="fa-sharp fa-regular fa-circle-xmark"></i>
+            </div>
+            <div class="modal-header">
+                <h1>Chỉnh sửa thông tin</h1>
+            </div>
+            <div class="modal-body">
+                <div class="modal--body__left">
+                    <label for="modal-name" class="modal-label">Họ và tên:</label>
+                    <input type="text" id="modal-name">
+                    <label for="modal-brithdate" class="modal-label">Ngày sinh:</label>
+                    <input type="text" id="modal-brithdate">
+                    <label for="modal-brithdate" class="modal-label modal-gender">Giới tính:</label>
+                    <input type="radio" name="gender" id="male" value="Nam">Nam
+                    <input type="radio" name="gender" id="female" value="Nữ">Nữ
+                    <input type="radio" name="gender" id="orther" value="khác">Khác
+                </div>
+                <div class="modal--body__right">
+                    <h4>Kinh nghiệm:</h4>
+                    <div contenteditable="true" class="content-experiences"></div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <h4>Liên kết ngoài:</h4>
+                <div class="modal-social-link">
+                    <label for="modal-email" class="modal-label">Email:</label>
+                    <input type="text" id="modal-email">
+                </div>
+                <div class="modal-social-link">
+                    <label for="modal-fb" class="modal-label">Facebook:</label>
+                    <input type="text" id="modal-fb">
+                </div>
+                <div class="modal-social-link">
+                    <label for="modal-linkedIn" class="modal-label">LinkedIn:</label>
+                    <input type="text" id="modal-linkedIn">
+                </div>
+                <button class="modal-saveBtn js-modal-saveBtn">
+                    <i class="fa-regular fa-floppy-disk"></i>
+                </button>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script src="./js/profile.js"></script>
 </body>
 
 </html>

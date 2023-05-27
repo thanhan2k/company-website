@@ -5,9 +5,16 @@
 //     fullName: "Tô Thành An",
 //     birthdate: new Date("2000-09-12"),
 //     gender: "Nam",
-//     position: "Developer",
 //     department: "B6.10",
 //     startDate: new Date("2023-01-01"),
+//     position: "Developer",
+//     experience: '',
+//     achievement: '',
+//     socialLink: {
+//     email: 'to.thanhan2k@gmail.com',
+//         facebook: 'fb.com',
+//         LinkedIn: 'https://www.linkedin.com/',
+//     },
 // }
 
 // let employees = [];
@@ -31,8 +38,7 @@ function redirectPage() {
         window.location.href = "home.html";
         sessionStorage.setItem('account', JSON.stringify(account));
     }
-}
-
+} 
 
 
 function errorMassage(userName, password) {
