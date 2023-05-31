@@ -1,0 +1,132 @@
+#body .search-container {
+    margin-top: var(--height__header);
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+#body .search-box {
+    border: 2px solid #546E7A;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#body input#search-input {
+    padding: 8px 12px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+
+#body button.search-btn {
+    border: none;
+    background: #fff;
+    padding: 0 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#body button.search-btn:hover i {
+    color: #546E7A;
+}
+
+.content-resource {
+    min-height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-top: 24px; */
+}
+
+.content-resource .sidebar {
+    display: inline-block;
+    background: #546E7A;
+    margin-left: 52px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.content-resource .sidebar ul {
+    list-style-type: none;
+}
+
+.content-resource .sidebar li {
+    padding: 0 28px;
+    line-height: var(--height__header);
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+}
+
+.content-resource .sidebar li:hover {
+    background: #ccc;
+}
+
+.content-resource .content-option {
+    width: 900px;
+    border: 2px solid #546E7A;
+    border-radius: 20px;
+    height: 400px;
+    padding: 16px;
+    margin-right: 60px;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.content-resource .content-option object {
+    width: 250px;
+    padding: 16px;
+    height: 300px;
+}
+ 
+
+.content-option .list {
+    margin-left: 40px;
+}
+
+.content-option .list li {
+    padding: 8px;
+}
+
+.form-pdf-container {
+    width: 200px;
+    height: 180px;
+    background-color: #e3d4d7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 16px;
+}
+
+.form-pdf-container .form-body {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 60px;
+    
+}
+
+.form-pdf-container p {
+    font-weight: 600;
+    padding: 4px 8px;
+}
+
+.form-pdf-container .form-footer {
+    height: 28px;
+    background-color: #ccc;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-pdf-container .form-footer a {
+    color: #000;
+    padding: 4px 8px;
+}
+.select-option {
+    background-color: #ccc !important;
+}

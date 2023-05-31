@@ -3,11 +3,9 @@
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    --height__header: 58px;
 }
 
-#main {
-    --height__header: 52px;
-}
 
 /* Begin: header */
 
@@ -22,7 +20,7 @@
 
 #nav {
     position: absolute;
-    left: 40px;
+    left: 70px;
 }
 
 #nav li {
@@ -73,12 +71,12 @@
 }
 
 .subnav li a {
-    line-height: 40px; 
+    line-height: var(--height__header); 
 }
 
 #header .lst-btn {
     float: right;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-right: 40px;
 }
 
@@ -105,7 +103,7 @@
     font-size: 12px;
     background-color: #ECEFF1;
     border-radius: 50%;
-    padding: 4px 8px;
+    padding: 6px 8px;
 }
 
 .lst-btn .user-icon:hover a {

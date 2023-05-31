@@ -45,7 +45,7 @@ function fillSocialLinks(employee) {
 
     // điền thông tin vào social-link
     let socialLinkContent = document.querySelector('.js-social-links');
-    socialLinkContent.innerHTML = `<ul>
+    socialLinkContent.innerHTML = `<h3>Liên kết ngoài</h3><ul>
     <li>Email: ${socialLinks.email} </li>
     <li>Facebook: ${socialLinks.facebook}</li>
     <li>LinkIn: ${socialLinks.linkedin}</li></ul>`
