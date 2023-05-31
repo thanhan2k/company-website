@@ -28,7 +28,7 @@ function showContent() {
 
 
 function checkBirthday(birthdate) {
-    let toDay = new Date("2023-09-12");
+    let toDay = new Date();
     let birthday = new Date(birthdate);
     console.log(birthday)
     let ngaySinh = birthday.getDate();
