@@ -15,12 +15,16 @@
     border: 2px solid #546E7A;
     color: #546E7A;
 }
+body {
+    overflow: hidden;
+}
 #search-text {
     font: Montserrat;
     font-weight: 700;
     font-size: 20px;
     line-height: 24.38px;
 }
+
 #date-text {
     font-family: 'Montserrat';
     font-weight: 600;
@@ -28,6 +32,7 @@
     line-height: 24.38px;
     top: 166px;
 }
+
 .date-selector {
     font-family: 'Montserrat';
     font-style: normal;
@@ -38,7 +43,7 @@
     left: 1136px;
 }
 
-.class-plus{
+.class-plus {
     right: 30px;
     bottom: 50px;
     background-color: aliceblue;
@@ -47,15 +52,6 @@
     padding: 10px;
     cursor: pointer;
 }
-.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
-    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
-        .MultiCarousel .MultiCarousel-inner .item { float: left;}
-        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
-    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
-    .MultiCarousel .leftLst { left:0; }
-    .MultiCarousel .rightLst { right:0; }
-        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
-
 
 #header {
     background-color: #546E7A;
@@ -86,7 +82,8 @@
     font-weight: bold;
     text-transform: uppercase;
 }
-#nav > li:hover > a,
+
+#nav>li:hover>a,
 #nav .subnav li:hover {
     background-color: #ccc;
 }
@@ -116,7 +113,7 @@
 }
 
 .subnav li a {
-    line-height: 40px; 
+    line-height: 40px;
 }
 
 #header .lst-btn {
@@ -138,6 +135,7 @@
 .lst-btn li:hover a {
     color: #ccc !important;
 }
+
 #header .user-icon a {
     font-size: 12px;
     background-color: #ECEFF1;
@@ -148,6 +146,7 @@
 .lst-btn .user-icon:hover a {
     background-color: #000 !important;
 }
+
 .modal {
     position: fixed;
     top: 0;
@@ -161,6 +160,7 @@
     font-weight: 600;
     font-size: 12px;
 }
+
 .modal-container {
     background: #fff;
     width: 1200px;
@@ -171,12 +171,14 @@ h1 {
     margin: 25px 0 0 50px;
     font-weight: 800;
 }
+
 .modal-closeBtn {
     float: right;
     padding: 12px 16px;
     font-size: 32px;
     cursor: pointer;
 }
+
 .modal-saveBtn {
     float: right;
     margin-bottom: 24px;
@@ -187,49 +189,90 @@ h1 {
     background: #B0BEC5;
     border: none;
 }
+
 .modal-saveBtn:hover {
     opacity: 0.8;
 }
+
 textarea {
-    background: #ECEFF1;    
+    background: #ECEFF1;
     border: 2px solid #546E7A;
     font-size: 20px;
     margin-top: 10px;
     resize: none;
 }
+
 select {
     width: 300px;
     height: 50px;
-    background: #ECEFF1;    
+    background: #ECEFF1;
     border: 2px solid #546E7A;
     font-size: 20px;
     margin-top: 10px;
 }
-.notify-detail, .notify-type-receive {
+
+.notify-detail,
+.notify-type-receive {
     margin-left: 50px;
     margin-top: 25px;
 }
+
 p {
     font-size: 20px;
     font-weight: 700;
     margin-top: 20px;
 }
+
 .notify-header {
     width: 500px;
     height: 40px;
 }
+
 .notify-content {
     width: 500px;
     height: 100px;
 }
+
 .notify-attachment {
     width: 500px;
     height: 100px;
 }
+
 .containter {
     display: flex;
     gap: 150px;
 }
+
 .open {
     display: flex;
+}
+.recent-notify-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 300px;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.recent-notify-table td,
+.recent-notify-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 20px;
+}
+
+.recent-notify-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.recent-notify-table tr:hover {
+    background-color: #ddd;
+}
+
+.recent-notify-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #546e7a;
+    color: white;
 }
