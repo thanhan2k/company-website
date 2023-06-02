@@ -22,7 +22,7 @@
                 <li><a href="./profile.html">Hồ sơ</a></li>
                 <li><a href="./notification.html">Thông báo</a></li>
                 <li>
-                    <a href="">
+                    <a>
                         Tài nguyên
                         <i class="nav-arrow-down fa-solid fa-chevron-down"></i>
                     </a>
@@ -31,7 +31,7 @@
                         <li><a href="./subnavDevice.html">Thiết bị</a></li>
                     </ul>
                 </li>
-                <li><a href="">Công việc</a></li>
+                <li><a href="./jobs.html">Công việc</a></li>
             </ul>
             <!-- End: nav -->
 
@@ -41,7 +41,7 @@
                 <li class="home-icon"><a href="./home.html" title="Trang chủ">
                         <i class="fa-solid fa-house"></i>
                     </a></li>
-                <li class="logout-icon"><a href="./login.html" title="Đăng xuất">
+                <li class="logout-icon"><a title="Đăng xuất">
                         <i class="fa-solid fa-right-from-bracket"></i>
                     </a></li>
                 <li class="user-icon"><a href="./profile.html" title="Hồ sơ">
@@ -65,18 +65,12 @@
             <div class="personal-description">
                 <div class="experience-section js-experience-section description-content">
                     <h3>Kinh nghiệm</h3>
-                    <ul class="experience-list">
-                        <li>Kinh nghiệm 5 năm làm việc trong ngành quản lý nhân sự</li>
-                    </ul>
+                    <ul class="experience-list"></ul>
                 </div>
 
                 <div class="achievement-section js-achievement-section description-content">
                     <h3>Thành tích</h3>
-                    <ul class="achievement-list">
-                        <li>Nhân viên xuất sắc quý 2 năm 2023 </li>
-                        <li>Nhân viên xuất sắc quý 3 năm 2022</li>
-                        <li>Giải ba cuộc thi “Ý tưởng lớn” năm 2022</li>
-                    </ul>
+                    <ul class="achievement-list"></ul>
                 </div>
 
                 <div class="social-links js-social-links description-content"></div>
@@ -109,7 +103,7 @@
                 </div>
                 <div class="modal--body__right">
                     <h4>Kinh nghiệm:</h4>
-                    <div contenteditable="true" class="content-experiences"></div>
+                    <div contenteditable="true" class="modal-content-experiences"></div>
                 </div>
             </div>
 
@@ -135,8 +129,28 @@
     </div>
     <!-- End: modal -->
 
+    <!-- Start: modal message logout -->
+    <div class="modal js-message-modal">
+        <div class="message-container">
+            <div class="header-messsage">
+                <div class="modal-closeBtn js-modal-closeBtn">
+                    <i class="fa-sharp fa-regular fa-circle-xmark"></i>
+                </div>
+            </div>
+            <div class="body-message">
+                <p>Xác nhận đăng xuất?</p>
+            </div>
+            <div class="footer-message">
+                <button class="cancel-btn">Hủy bỏ</button>
+                <button class="confirm-btn">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+    <!-- End: modal message logout -->
+
     <script src="./js/profile.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/header.js"></script>
 </body>
 
 </html>

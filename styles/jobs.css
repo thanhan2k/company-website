@@ -1,0 +1,114 @@
+#body {
+    margin-top: var(--height__header);
+    padding: 4px;
+    margin-bottom: 40px;
+}
+
+#main #body table,
+th {
+    padding: 8px;
+    border-collapse: collapse;
+    text-align: center;
+    /* font-weight: 600; */
+}
+
+#main #body tr:last-child {
+    border-bottom: 1px solid black;
+}
+
+#main #body td {
+    padding: 8px;
+}
+
+/* #main #body tbody {
+    overflow-y: scroll;
+    height: 100px;
+} */
+
+tbody tr:hover {
+    background-color: #ccc;
+}
+
+/* Search box */
+#body .search-container {
+    padding: 16px;
+    display: inline-block;
+    margin-left: 116px;
+}
+
+#body .search-box {
+    border: 2px solid #546E7A;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#body input#search-input {
+    padding: 8px 12px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+
+#body button.search-btn {
+    border: none;
+    background: #fff;
+    padding: 0 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#body button.search-btn:hover i {
+    color: #546E7A;
+}
+
+/* datefilter box */
+#body .date-filter-container {
+    float: right;
+    margin-top: 36px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 52px;
+}
+
+#body .date-filter-container #date-filter {
+    border: 2px solid #546E7A;
+    padding: 6px 12px;
+    font-size: 16px;
+}
+
+#footer .jobs-created {
+    padding: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    background: #ECEFF1;
+    border: 2px solid #546E7A;
+    margin-left: 40px;
+}
+
+#footer .btn-edit {
+    width: 48px;
+    height: 48px;
+    background: #B0BEC5;
+    border-radius: 100px;
+    border: none;
+    position: fixed;
+    bottom: 20px;
+    right: 120px;
+}
+
+#footer .btn-add {
+    width: 48px;
+    height: 48px;
+    background: #B0BEC5;
+    border-radius: 100px;
+    border: none;
+    position: fixed;
+    bottom: 20px;
+    right: 48px;
+}
+
+#footer .btn-edit:hover {
+    opacity: 0.8;
+}

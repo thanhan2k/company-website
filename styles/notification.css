@@ -177,6 +177,9 @@ h1 {
     font-size: 32px;
     cursor: pointer;
 }
+.modal-closeBtn:hover i {
+    color: rgb(193, 9, 9);
+}
 .modal-saveBtn {
     float: right;
     margin-bottom: 24px;
@@ -232,4 +235,50 @@ p {
 }
 .open {
     display: flex;
+}
+
+/* Message modal */
+.message-container {
+    width: 300px;
+    height: 120px;
+    background-color: #ECEFF1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.message-container .header-messsage {
+    height: 36px;
+}
+
+.message-container .modal-closeBtn {
+    font-size: 20px;
+}
+
+.message-container .body-message {
+    text-align: center;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.message-container .footer-message {
+    align-self: center;
+}
+
+.message-container .footer-message button {
+    margin: 12px 8px 0 8px;
+    padding: 4px;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 80px;
+}
+
+.message-container .footer-message button:hover {
+    opacity: 0.8;
+}
+
+.message-container .footer-message .cancel-btn {
+    color: rgb(193, 9, 9);
+    border: 2px solid rgb(193, 9, 9);
 }
