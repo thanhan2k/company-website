@@ -56,7 +56,7 @@
     padding: 4px 0px;
 }
 
- input[type="text"] {
+.modal-container input[type="text"] {
     border: none;
     border-bottom: 1px solid black;
     outline: none;
@@ -70,7 +70,7 @@ input[type="radio"] {
 }
 
 
-.modal--body__right .content-experiences {
+.modal--body__right .modal-content-experiences {
     width: 340px;
     min-height: 160px;
     border: 2px solid #546E7A;
@@ -111,6 +111,51 @@ input[type="radio"] {
 
 h4 {
     margin-bottom: 12px;
+}
+
+/* Message modal */
+.message-container {
+    width: 300px;
+    height: 120px;
+    background-color: #ECEFF1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.message-container .header-messsage {
+    height: 36px;
+}
+
+.message-container .modal-closeBtn {
+    font-size: 20px;
+}
+
+.message-container .body-message {
+    text-align: center;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.message-container .footer-message {
+    align-self: center;
+}
+
+.message-container .footer-message button {
+    margin: 20px 8px 0 8px;
+    padding: 4px;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 80px;
+}
+
+.message-container .footer-message button:hover {
+    opacity: 0.8;
+}
+
+.message-container .footer-message .cancel-btn {
+    color: rgb(193, 9, 9);
+    border: 2px solid rgb(193, 9, 9);
 }
 
 .open {

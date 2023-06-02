@@ -7,6 +7,7 @@
     <title>Trang chủ</title>
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/modal.css">
     <link rel="stylesheet" href="../assets/fonts-icon/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
     <!-- <link rel="stylesheet" href="../assets/fonts-icon/themify-icons-font/themify-icons/themify-icons.css"> -->
 </head>
@@ -19,7 +20,7 @@
                 <li><a href="./profile.html">Hồ sơ</a></li>
                 <li><a href="./notification.html">Thông báo</a></li>
                 <li>
-                    <a href="">
+                    <a>
                         Tài nguyên
                         <i class="nav-arrow-down fa-solid fa-chevron-down"></i>
                     </a>
@@ -28,7 +29,7 @@
                         <li><a href="./subnavDevice.html">Thiết bị</a></li>
                     </ul>
                 </li>
-                <li><a href="">Công việc</a></li>
+                <li><a href="./jobs.html">Công việc</a></li>
             </ul>
             <!-- End: nav -->
 
@@ -38,7 +39,7 @@
                     <li class="home-icon"><a href="./home.html" title="Trang chủ">
                         <i class="fa-solid fa-house"></i>
                     </a></li>
-                    <li class="logout-icon"><a href="./login.html" title="Đăng xuất">
+                    <li class="logout-icon"><a title="Đăng xuất">
                         <i class="fa-solid fa-right-from-bracket"></i>
                     </a></li>
                     <li class="user-icon"><a href="./profile.html" title="Hồ sơ">
@@ -80,6 +81,26 @@
         </div>
     </div>
 
+     <!-- Start: modal message logout -->
+     <div class="modal js-message-modal">
+        <div class="message-container">
+            <div class="header-messsage">
+                <div class="modal-closeBtn js-modal-closeBtn">
+                    <i class="fa-sharp fa-regular fa-circle-xmark"></i>
+                </div>
+            </div>
+            <div class="body-message">
+                <p>Xác nhận đăng xuất?</p>
+            </div>
+            <div class="footer-message">
+                <button class="cancel-btn">Hủy bỏ</button>
+                <button class="confirm-btn">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+    <!-- End: modal message logout -->
+
     <script src="./js/home.js"></script>
+    <script src="./js/header.js"></script>
 </body>
 </html>

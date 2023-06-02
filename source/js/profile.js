@@ -14,8 +14,9 @@ function renderProfilePage() {
         if (account.user === employees[i].user)
             employee = employees[i];
     }
-
     fillPersonalContent(employee);
+    fillExperienceSection(employee);
+    fillAhievementSection(employee);
     fillSocialLinks(employee);
 }
 
@@ -40,7 +41,7 @@ function fillPersonalContent(employee) {
 }
 
 function fillSocialLinks(employee) {
-    // lấy data trên localStorage
+    // lấy data trong employee
     let socialLinks = employee.socialLinks;
 
     // điền thông tin vào social-link
@@ -52,11 +53,21 @@ function fillSocialLinks(employee) {
 }
 
 function fillExperienceSection(employee) {
-
+    let experiences = employee.experiences;
+    let experienceList = document.querySelector('.experience-list');
+    experienceList.innerHTML = '';
+    for (let i = 0; i < experiences.length; ++i) {
+        experienceList.innerHTML += `<li>${experiences[i]}</li>`
+    }
 }
 
 function fillAhievementSection(employee) {
-
+    let achievements = employee.achievements;
+    let achievementList = document.querySelector('.achievement-list');
+    achievementList.innerHTML = '';
+    for (let i = 0; i < achievements.length; ++i) {
+        achievementList.innerHTML += `<li>${achievements[i]}</li>`
+    }
 }
 
 /*---------------------- edit personal information javascript  --------------------------- */
@@ -99,8 +110,6 @@ function updateEmployee(employee) {
     employee.socialLinks.email = document.getElementById('modal-email').value;
     employee.socialLinks.facebook = document.getElementById('modal-fb').value;
     employee.socialLinks.linkedin = document.getElementById('modal-linkedin').value;
-
-    console.log(employee.birthdate)
 }
 
 function preFillEditModal() {
@@ -121,6 +130,11 @@ function preFillEditModal() {
         document.getElementById('female').checked = true;
     else if (employee.gender === 'Khác')
         document.getElementById('orther').checked = true;
+    let experiencesContent = document.querySelector('.modal-content-experiences');
+    experiencesContent.innerHTML = '';
+    for (let i = 0; i < employee.experiences.length; ++i) {
+        experiencesContent.innerHTML += `- ${employee.experiences[i]}<br>`
+    }
     let email = document.getElementById('modal-email');
     email.value = employee.socialLinks.email;
     let facebook = document.getElementById('modal-fb');
