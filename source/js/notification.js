@@ -12,3 +12,4 @@ function hideModal() {
     let modal = document.querySelector('.js-modal');
     modal.classList.remove('open');
 }
+document.getElementById('date').valueAsDate = new Date()

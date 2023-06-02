@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,11 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <title>Thông báo</title>
     <link rel="stylesheet" href="..\styles\notification.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div id="header">
         <!-- Begin: nav -->
@@ -33,17 +37,17 @@
 
         <!-- Begin: button -->
 
-            <ul class="lst-btn">
-                <li class="home-icon"><a href="./home.html" title="Trang chủ">
+        <ul class="lst-btn">
+            <li class="home-icon"><a href="./home.html" title="Trang chủ">
                     <i class="fa-solid fa-house"></i>
                 </a></li>
                 <li class="logout-icon"><a title="Đăng xuất">
                     <i class="fa-solid fa-right-from-bracket"></i>
                 </a></li>
-                <li class="user-icon"><a href="./profile.html" title="Hồ sơ">
+            <li class="user-icon"><a href="./profile.html" title="Hồ sơ">
                     <i class="fa-solid fa-user"></i>
                 </a></li>
-            </ul>
+        </ul>
         <!-- End: button -->
 
     </div>
@@ -54,7 +58,8 @@
                     <form class="">
                         <div class="position-relative">
                             <input class="p-2" id="search-text" type="text" placeholder="Tìm kiếm..." name="search">
-                            <button class="search-bt border-0 bg-transparent"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <button class="search-bt border-0 bg-transparent"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                     </form>
                 </div>
@@ -63,7 +68,7 @@
             <div class="col-6">
                 <div>
                     <span>Bộ Lọc Ngày:</span>
-                    <input class="border-info p-1" type="date" value="2000-01-01">
+                    <input id="date" class="border-info p-1" type="date">
                 </div>
             </div>
         </div>
@@ -72,82 +77,69 @@
             <div class="col">
                 <table class="table table-hover">
                     <thead>
-                      <tr>
-                        <th scope="col">Mã thông báo</th>
-                        <th scope="col">Chủ đề</th>
-                        <th scope="col">Người gửi</th>
-                        <th scope="col">Thời Gian</th>
-                        <th scope="col">Phân Loại</th>
-                      </tr>
+                        <tr>
+                            <th scope="col">Mã thông báo</th>
+                            <th scope="col">Chủ đề</th>
+                            <th scope="col">Người gửi</th>
+                            <th scope="col">Thời Gian</th>
+                            <th scope="col">Phân Loại</th>
+                        </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">#KD001</th>
-                        <td>Họp quý 2 </td>
-                        <td>Nguyễn Văn A</td>
-                        <td>9:30</td>
-                        <td>Thông báo chung</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">#NS001</th>
-                        <td>Thống kê ngày nghỉ</td>
-                        <td>Nguyễn Văn A</td>
-                        <td>20:00</td>
-                        <td>Thông báo riêng</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">#BGD001</th>
-                        <td>Kiện toàn 2023</td>
-                        <td>Nguyễn Văn A</td>
-                        <td>12:30</td>
-                        <td>Thông báo chung</td>
-                      </tr>
+                        <tr>
+                            <th scope="row">#KD001</th>
+                            <td>Họp quý 2 </td>
+                            <td>Nguyễn Văn A</td>
+                            <td>9:30</td>
+                            <td>Thông báo chung</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#NS001</th>
+                            <td>Thống kê ngày nghỉ</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>20:00</td>
+                            <td>Thông báo riêng</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#BGD001</th>
+                            <td>Kiện toàn 2023</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>12:30</td>
+                            <td>Thông báo chung</td>
+                        </tr>
                     </tbody>
-                  </table>
+                </table>
             </div>
 
         </div>
     </div>
-    <h3>Thông báo đã tạo gần đây</h3>
-    <div class="container">
-        <div class="row">
-            <div class="col-10">
-                <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
-                    <div class="MultiCarousel-inner">
-                        <button class="item">
-                            <div class="">
-                                <p class="text-break">Họp bàn giao sản phẩm</p>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <p>06/05/2023</p>
-                                <p>9:30</p>
-                            </div>
-                        </button>
-    
-                        <button class="item">
-                            <div class="">
-                                <p class="text-break">Họp đội nhóm</p>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <p>06/05/2023</p>
-                                <p>9:30</p>
-                            </div>
-                        </button>
-    
-
-                    </div>
-                    <button class="btn btn-primary leftLst" style="height: 70px;width: 70px;"><</button>
-                    <button class="btn btn-primary rightLst" style="height: 70px;width: 70px;">></button>
-                </div>
-            </div>
-            <div class="position-relative col-2">
-                <div class="position-relative class-plus js-addBtn" style="background-color: #FFFFFFFF;margin: 250px 0 0 150px;">
-                    <button class="fa-solid fa-plus" style="height: 70px;width: 70px;border-radius: 35px"></button>
-                </div>
-            </div>
-            
+    <h3 style="margin-top: 20px;font-weight: 700;">Thông báo đã tạo gần đây</h3>
+    <div class="recent-notify-table">
+        <table>
+            <tr>
+                <th>Nội dung thông báo</th>
+                <th>Thời gian</th>
+            </tr>
+            <tr>
+                <td>Thông báo về thời gian nghỉ Tết dương lịch và Tết nguyên đán 2023</td>
+                <td>7h30 - 10/01/2023</td>
+            </tr>
+            <tr>
+                <td>Thông báo gia tăng nhân sự phòng kỹ thuật</td>
+                <td>13h - 20/05/2023</td>
+            </tr>
+            <tr>
+                <td>Thông báo cập nhật Website công ty</td>
+                <td>17h - 30/05/2023</td>
+            </tr>
+        </table>
+    </div>
+    <div class="position-relative col-2">
+        <div class="position-relative class-plus js-addBtn"
+            style="background-color: #FFFFFFFF;margin: 0px 0 0 150px;">
+            <button class="fa-solid fa-plus"
+                style="height: 70px;width: 70px;border-radius: 35px; margin-left: 1200px;"></button>
         </div>
-        
     </div>
     <div class="modal js-modal">
         <div class="modal-container">
@@ -218,7 +210,6 @@
     <!-- End: modal message logout -->
 
     <script src="../source/js/notification.js"></script>
-    <script src="./js/header.js"></script>
     <script >
         $(document).ready(function () {
     var itemsMainDiv = ('.MultiCarousel');
@@ -325,4 +316,5 @@
 });
     </script>
 </body>
+
 </html>
