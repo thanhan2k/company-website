@@ -109,6 +109,7 @@ tbody tr:hover {
     right: 48px;
 }
 
-#footer .btn-edit:hover {
+#footer .btn-edit:hover,
+#footer .btn-add:hover {
     opacity: 0.8;
 }
