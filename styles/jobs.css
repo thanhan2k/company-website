@@ -12,6 +12,16 @@ th {
     /* font-weight: 600; */
 }
 
+table.table-header {
+    table-layout: fixed;
+    margin-bottom: 12px;
+}
+
+.scroll-table {
+    max-height: 280px;
+    overflow-y: auto;
+}
+
 #main #body tr:last-child {
     border-bottom: 1px solid black;
 }
@@ -20,13 +30,11 @@ th {
     padding: 8px;
 }
 
-/* #main #body tbody {
-    overflow-y: scroll;
-    height: 100px;
-} */
+
 
 tbody tr:hover {
     background-color: #ccc;
+    cursor: pointer;
 }
 
 /* Search box */
@@ -87,18 +95,8 @@ tbody tr:hover {
     margin-left: 40px;
 }
 
-#footer .btn-edit {
-    width: 48px;
-    height: 48px;
-    background: #B0BEC5;
-    border-radius: 100px;
-    border: none;
-    position: fixed;
-    bottom: 20px;
-    right: 120px;
-}
 
-#footer .btn-add {
+#footer .add-btn {
     width: 48px;
     height: 48px;
     background: #B0BEC5;
@@ -107,9 +105,190 @@ tbody tr:hover {
     position: fixed;
     bottom: 20px;
     right: 48px;
+    cursor: pointer;
 }
 
-#footer .btn-edit:hover,
-#footer .btn-add:hover {
+#footer .add-btn:hover,
+.edit-btn:hover {
+    opacity: 0.8;
+    color: #546E7A;
+}
+
+/* Start: Job modal */
+.modal-container {
+    background: #fff;
+}
+
+.modal-container.modal-job {
+    width: 440px;
+    height: 460px;
+}
+
+.modal-job-details .modal-heading {
+    padding: 8px;
+    margin-left: 12px;
+    margin-top: 20px;
+}
+
+.modal-job-answer .modal-heading {
+    padding: 8px;
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+.modal-job .modal-heading .modal-header,
+.modal-add-job .modal-heading .modal-header{
+    display: inline-block;
+}
+
+.modal-job .modal-heading .modal-closeBtn,
+.modal-add-job .modal-heading .modal-closeBtn {
+    float: right;
+    font-size: 28px;
+    padding: 0px 8px;
+}
+
+.modal-job .modal-body,
+.modal-job .modal-footer {
+    padding: 4px;
+    margin: 0 40px;
+}
+
+.modal-body h3 {
+    padding: 4px 0px;
+}
+
+.modal-body .box {
+    background: #ECEFF1;
+    border: 2px solid #546E7A;
+    margin-top: 4px;
+    margin-bottom: 16px;
+}
+
+.modal-body .section-header-job .box {
+    height: 28px;
+}
+
+.modal-body .section-content-job .box {
+    height: 140px;
+}
+
+.modal-body .section-attachmentFile-job .box {
+    min-height: 28px;
+}
+
+.section-attachmentFile-job .box a {
+    color: #000;
+    line-height: 24px;
+    padding: 0px 4px;
+    text-decoration: none;
+    display: block;
+}
+
+.modal-body .box p {
+    line-height: 24px;
+    padding: 0px 4px;
+}
+
+.modal-job-details .reply-btn {
+    float: right;
+    background: #ECEFF1;
+    border: 2px solid #546E7A;
+    border-radius: 10px;
+    width: 88px;
+    height: 32px;
+    margin-right: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.modal-job-details .reply-btn:hover {
     opacity: 0.8;
 }
+
+.modal-footer {
+    position: relative;
+}
+
+.modal-footer label {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.modal-job .modal-footer .modal-saveBtn {
+    padding: 8px 12px;
+    font-size: 20px;
+    border-radius: 100px;
+    background: #B0BEC5;
+    border: none;
+    position: absolute;
+    right: -16px;
+    top: -6px;
+} 
+
+/* modal add job */
+.modal-add-job .modal-container {
+    width: 700px;
+    height: 420px;
+}
+
+.modal-add-job .modal-heading {
+    padding: 8px;
+    margin: 8px;
+}
+
+.modal-add-job .modal-heading .modal-header {
+    margin-left: 18px;
+}
+
+.modal-add-job .modal-body {
+    margin: 0 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .modal-add-job .modal-body .box {
+    width: 50%;
+} */
+
+.modal-add-job .section-content-job .box {
+    height: 120px;
+}
+
+.modal-add-job .modal-body .body-left {
+    width: 45%;
+}
+
+.modal-add-job .modal-body .body-right {
+    width: 40%;
+}
+
+.modal-add-job .body-right select {
+    background: #ECEFF1;
+    border: 2px solid #546E7A;
+    height: 28px;
+    margin-top: 4px;
+    width: 220px;
+}
+
+.modal-add-job .body-right option {
+    line-height: 28px;
+}
+
+.modal-add-job .modal-footer {
+    /* width: 100%; */
+    position: relative;
+    /* background-color: red; */
+}
+
+.modal-add-job .modal-footer .modal-saveBtn {
+    padding: 8px 12px;
+    font-size: 20px;
+    border-radius: 100px;
+    background: #B0BEC5;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+/* End: Job modal */

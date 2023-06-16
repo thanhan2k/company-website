@@ -1,3 +1,5 @@
+let employees = JSON.parse(localStorage.getItem('employees'));
+
 function redirectPage() {
     let userName = document.getElementById('username').value;
     let password = document.getElementById('password').value;
@@ -8,11 +10,11 @@ function redirectPage() {
 
     errorMassage(userName, password);
 
-    if (checkUserName(userName) && checkPassword(password)) {
+    if (checkLogin(userName, password)) {
         window.location.href = "home.html";
         sessionStorage.setItem('account', JSON.stringify(account));
     }
-} 
+}
 
 
 function errorMassage(userName, password) {
@@ -40,12 +42,16 @@ function errorMassage(userName, password) {
     } else {
         document.getElementById('password-error').innerHTML = '';
     }
+
+    if (checkLogin(userName, password))
+        document.getElementById('login-error').innerHTML = '';
+
 }
 
 
 function checkUserName(userName) {
-    let employees = JSON.parse(localStorage.getItem('employees'));
-    let checkUserName = true;
+    let checkUserName = false;
+    let user = getUser(userName, password);
     employees.forEach(function (employee) {
         if (userName !== employee.userName)
             checkUserName = false;
@@ -54,7 +60,6 @@ function checkUserName(userName) {
 }
 
 function checkPassword(password) {
-    let employees = JSON.parse(localStorage.getItem('employees'));
     let checkPassword = true;
     employees.forEach(function (employee) {
         if (password !== employee.password)
@@ -62,6 +67,27 @@ function checkPassword(password) {
     });
     return checkPassword;
 }
+
+function checkLogin(userName, password) {
+    let checkLogin = false;
+    let user = getUser(userName, password);
+    for (let i = 0; i < employees.length; ++i) {
+        if (userName === user.userName && password === user.password)
+            checkLogin = true;
+    }
+    return checkLogin;
+}
+
+function getUser(userName, password) {
+    let user;
+    for (let i = 0; i < employees.length; ++i) {
+        if (userName === employees[i].userName && password === employees[i].password)
+            user = employees[i];
+    }
+    return user;
+}
+
+
 
 
 

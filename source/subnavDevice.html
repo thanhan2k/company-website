@@ -16,7 +16,7 @@
         <div id="header">
             <!-- Begin: nav -->
             <ul id="nav">
-                <li><a href="./profile.html">Hồ sơ</a></li>
+                <li onclick="redirectProfilePage()"><a>Hồ sơ</a></li>
                 <li><a href="./notification.html">Thông báo</a></li>
                 <li>
                     <a>
@@ -77,9 +77,9 @@
                             </div>
                             <div class="form-footer">
                                 <p class="form-name">Máy móc 1</p>
-                                <a href="../assets/filePDF/Business-case.pdf">
-                                    <i class="fa-solid fa-download"></i>
-                                </a>
+                                <button class="show-btn" onclick="showModal()">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
                             </div>
                         </div>
                         <div class="form-pdf-container">
@@ -89,7 +89,7 @@
                             <div class="form-footer">
                                 <p class="form-name">Máy móc 2</p>
                                 <a href="">
-                                    <i class="fa-solid fa-download"></i>
+                                    <i class="fa-solid fa-eye"></i>
                                 </a>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                             <div class="form-footer">
                                 <p class="form-name">Máy móc 3</p>
                                 <a href="">
-                                    <i class="fa-solid fa-download"></i>
+                                    <i class="fa-solid fa-eye"></i>
                                 </a>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                             <div class="form-footer">
                                 <p class="form-name">Máy móc 4</p>
                                 <a href="">
-                                    <i class="fa-solid fa-download"></i>
+                                    <i class="fa-solid fa-eye"></i>
                                 </a>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                             <div class="form-footer">
                                 <p class="form-name">Máy móc 5</p>
                                 <a href="">
-                                    <i class="fa-solid fa-download"></i>
+                                    <i class="fa-solid fa-eye"></i>
                                 </a>
                             </div>
                         </div>
@@ -133,7 +133,7 @@
                             <div class="form-footer">
                                 <p class="form-name">Máy móc 6</p>
                                 <a href="">
-                                    <i class="fa-solid fa-download"></i>
+                                    <i class="fa-solid fa-eye"></i>
                                 </a>
                             </div>
                         </div>
@@ -146,7 +146,7 @@
     <!-- Start: modal message logout -->
     <div class="modal js-message-modal">
         <div class="message-container">
-            <div class="header-messsage">
+            <div class="heading-messsage">
                 <div class="modal-closeBtn js-modal-closeBtn">
                     <i class="fa-sharp fa-regular fa-circle-xmark"></i>
                 </div>
@@ -161,6 +161,22 @@
         </div>
     </div>
     <!-- End: modal message logout -->
+
+    <!-- Start: modal showImg -->
+    <div class="modal modal-img js-modal-img">
+        <div class="modal-container">
+            <div class="modal-heading">
+                <div onclick="hideModal()" class="modal-closeBtn js-modal-closeBtn">
+                    <i class="fa-sharp fa-regular fa-circle-xmark"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <img src="../assets/img/maychebienthucpham1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End: modal showImg -->
+
     <script src="./js/subnavDevice.js"></script>
     <script src="./js/header.js"></script>
 </body>

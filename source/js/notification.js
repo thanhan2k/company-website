@@ -1,3 +1,8 @@
+// lấy dữ liệu đăng nhập từ login page
+let account = JSON.parse(sessionStorage.getItem('account'));
+// lấy dữ liệu của các nhân viên trên local storage
+let employees = JSON.parse(localStorage.getItem('employees'));
+
 let addButton = document.querySelector('.js-addBtn');
 
 addButton.addEventListener('click', showModal)

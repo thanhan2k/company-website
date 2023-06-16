@@ -9,18 +9,21 @@ renderpage.addEventListener('load', renderProfilePage());
 
 function renderProfilePage() {
     // Lấy ra nhân viên có user-name trùng user-name với tài khoản đã nhập liệu ở login page
-    let employee;
-    for (let i = 0; i < employees.length; ++i) {
-        if (account.user === employees[i].user)
-            employee = employees[i];
-    }
-    fillPersonalContent(employee);
-    fillExperienceSection(employee);
-    fillAhievementSection(employee);
-    fillSocialLinks(employee);
+    let employee = getEmployee(account.userName, account.password);
+    
+    fillInfo(employee);
 }
 
-function fillPersonalContent(employee) {
+function getEmployee (userName, password) {
+    let employee;
+    for (let i = 0; i < employees.length; ++i) {
+        if (account.userName === employees[i].userName && account.password === employees[i].password)
+            employee = employees[i];
+    }
+    return employee;
+}
+
+function fillInfo(employee) {
     // lấy data trên localStorage
     let fullName = employee.fullName;
     let birthdate = new Date(employee.birthdate).toLocaleDateString('en-GB');
@@ -38,36 +41,42 @@ function fillPersonalContent(employee) {
     <li>Phòng ban: ${department}</li>
     <li>Ngày bắt đầu làm việc: ${startDate}</li>
     <li>Chức vụ: ${position}</li></ul>`;
-}
 
-function fillSocialLinks(employee) {
-    // lấy data trong employee
+    // điền thông tin vào socialLinks
     let socialLinks = employee.socialLinks;
-
-    // điền thông tin vào social-link
     let socialLinkContent = document.querySelector('.js-social-links');
     socialLinkContent.innerHTML = `<h3>Liên kết ngoài</h3><ul>
     <li>Email: ${socialLinks.email} </li>
     <li>Facebook: ${socialLinks.facebook}</li>
     <li>LinkIn: ${socialLinks.linkedin}</li></ul>`
-}
 
-function fillExperienceSection(employee) {
+    // điền thông tin vào kinh nghiệm
     let experiences = employee.experiences;
     let experienceList = document.querySelector('.experience-list');
     experienceList.innerHTML = '';
     for (let i = 0; i < experiences.length; ++i) {
         experienceList.innerHTML += `<li>${experiences[i]}</li>`
     }
-}
 
-function fillAhievementSection(employee) {
+    // điền thông tin vào thành tích
     let achievements = employee.achievements;
     let achievementList = document.querySelector('.achievement-list');
     achievementList.innerHTML = '';
     for (let i = 0; i < achievements.length; ++i) {
         achievementList.innerHTML += `<li>${achievements[i]}</li>`
     }
+
+    // giữ lại dữ liệu tí qua update có mà làm
+    document.getElementById('idEmployee').value = employee.id;
+}
+
+function findIndex(idEmployee) {
+    let index = -1;
+    for (let i = 0; i < employees.length; ++i) {
+        if (idEmployee === employees[i].id)
+            index = i;
+    }
+    return index;
 }
 
 /*---------------------- edit personal information javascript  --------------------------- */
@@ -76,16 +85,12 @@ saveBtn.addEventListener('click', saveInfo);
 
 function saveInfo() {
     // Lấy ra nhân viên có user-name trùng user-name với tài khoản đã nhập liệu ở login page
-    let employee;
-    for (let i = 0; i < employees.length; ++i) {
-        if (account.user === employees[i].user)
-            employee = employees[i];
-        employees.splice(i, 1);
-    }
+    let employee = getEmployee(account.userName, account.password);
+    let idEmployee = document.getElementById('idEmployee').value;
     updateEmployee(employee);
-    employees.push(employee);
+    employees[findIndex(idEmployee)] = employee;
     localStorage.setItem('employees', JSON.stringify(employees));
-    renderProfilePage();
+    fillInfo(employee);
     hideModal();
 }
 
@@ -93,11 +98,7 @@ function updateEmployee(employee) {
     /*CẬP NHẬT LẠI employee SAU KHI NHẬP CÁC TRƯỜNG DỮ LIỆU*/
     employee.fullName = document.getElementById('modal-name').value;
 
-    // Xử lí chuổi ngày từ unput -> định dạng kiểu Date()
-    let inputDate = document.getElementById('modal-brithdate').value;
-    const parts = inputDate.split('/');
-    employee.birthdate = new Date(parts[2], parts[1] - 1, parts[0]);
-
+    employee.birthdate = new Date(document.getElementById('modal-brithdate').value);
     // Xử lí chọn ra value của biến gender
     if (document.getElementById('male').checked) {
         employee.gender = document.getElementById('male').value;
@@ -110,19 +111,30 @@ function updateEmployee(employee) {
     employee.socialLinks.email = document.getElementById('modal-email').value;
     employee.socialLinks.facebook = document.getElementById('modal-fb').value;
     employee.socialLinks.linkedin = document.getElementById('modal-linkedin').value;
+
+    // Xử lí experiences
+    let experiencesTextbox = document.querySelector('.modal-textbox.modal-content-experiences');
+    content = experiencesTextbox.innerHTML;
+    let experiences = content.split('- ');
+    for (let i = 0; i < experiences.length; ++i) {
+        experiences[i] = experiences[i].replace('<br>', '').replace('.', '').replace('</div>', '').replace('<div>', '');
+    }
+    employee.experiences = [];
+    for (let i = 1; i < experiences.length; ++i) {
+        employee.experiences[i - 1] = experiences[i];
+    }
 }
 
 function preFillEditModal() {
-    let employee;
-    for (let i = 0; i < employees.length; ++i) {
-        if (account.user === employees[i].user)
-            employee = employees[i];
-    }
+    let employee = getEmployee(account.userName, account.password);
 
     let fullName = document.getElementById('modal-name');
     fullName.value = employee.fullName;
-    let birthdate = document.getElementById('modal-brithdate');
-    birthdate.value = new Date(employee.birthdate).toLocaleDateString('en-GB');
+    // Xử lí định dạng date từ localStorage để gán vào value của thẻ input có type là date
+    let date = new Date(employee.birthdate);
+    date.setDate(date.getDate());
+    document.getElementById('modal-brithdate').value = date.toISOString().slice(0, 10);;
+    // console.log(day);
     // Xử lí checked vào giới tính
     if (employee.gender === 'Nam')
         document.getElementById('male').checked = true;
@@ -133,7 +145,7 @@ function preFillEditModal() {
     let experiencesContent = document.querySelector('.modal-content-experiences');
     experiencesContent.innerHTML = '';
     for (let i = 0; i < employee.experiences.length; ++i) {
-        experiencesContent.innerHTML += `- ${employee.experiences[i]}<br>`
+        experiencesContent.innerHTML += `- ${employee.experiences[i]}.<br>`
     }
     let email = document.getElementById('modal-email');
     email.value = employee.socialLinks.email;
@@ -141,4 +153,13 @@ function preFillEditModal() {
     facebook.value = employee.socialLinks.facebook;
     let linkedin = document.getElementById('modal-linkedin');
     linkedin.value = employee.socialLinks.linkedin;
+}
+
+function findIndex(idEmployee) {
+    let index = -1;
+    for (let i = 0; i < employees.length; ++i) {
+        if (idEmployee === employees[i].id)
+            index = i;
+    }
+    return index;
 }

@@ -1,3 +1,8 @@
+// lấy dữ liệu đăng nhập từ login page
+let account = JSON.parse(sessionStorage.getItem('account'));
+// lấy dữ liệu của các nhân viên trên local storage
+let employees = JSON.parse(localStorage.getItem('employees'));
+
 let headerContent = document.querySelector('.header-content');
 let formNames = document.querySelectorAll('.form-name');
 let formContents = document.querySelectorAll('.form-content');
@@ -31,3 +36,13 @@ function fillContentDepartment() {
         formNames[i].innerHTML = `PH00${i+1}`;
     }
 };
+
+let modal = document.querySelector('.modal.js-modal-img');
+
+function showModal() {
+    modal.classList.add('open');
+}
+
+function hideModal() {
+    modal.classList.remove('open');
+}

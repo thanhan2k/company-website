@@ -16,7 +16,7 @@
         <div id="header">
             <!-- Begin: nav -->
             <ul id="nav">
-                <li><a href="./profile.html">Hồ sơ</a></li>
+                <li onclick="redirectProfilePage()"><a>Hồ sơ</a></li>
                 <li><a href="./notification.html">Thông báo</a></li>
                 <li>
                     <a>
@@ -77,10 +77,10 @@
                                 <p class="form-content">Biểu mẫu cho nhân viên</p>
                             </div>
                             <div class="form-footer">
-                                <p class="form-name">Biểu mẫu 1</p>
-                                <a href="../assets/filePDF/Business-case.pdf">
+                                <p onclick="showFile()" class="form-name">Biểu mẫu 1</p>
+                                <button class="dow-btn" onclick="downloadFile()">
                                     <i class="fa-solid fa-download"></i>
-                                </a>
+                                </button>
                             </div>
                         </div>
                         <div class="form-pdf-container">
@@ -89,9 +89,9 @@
                             </div>
                             <div class="form-footer">
                                 <p class="form-name">Biểu mẫu 2</p>
-                                <a href="">
+                                <button class="dow-btn">
                                     <i class="fa-solid fa-download"></i>
-                                </a>
+                                </button>
                             </div>
                         </div>
                         <div class="form-pdf-container">
@@ -100,9 +100,9 @@
                             </div>
                             <div class="form-footer">
                                 <p class="form-name">Biểu mẫu 3</p>
-                                <a href="">
+                                <button class="dow-btn">
                                     <i class="fa-solid fa-download"></i>
-                                </a>
+                                </button>
                             </div>
                         </div>
                         <div class="form-pdf-container">
@@ -111,9 +111,9 @@
                             </div>
                             <div class="form-footer">
                                 <p class="form-name">Biểu mẫu 4</p>
-                                <a href="">
+                                <button class="dow-btn">
                                     <i class="fa-solid fa-download"></i>
-                                </a>
+                                </button>
                             </div>
                         </div>
                         <div class="form-pdf-container">
@@ -122,9 +122,9 @@
                             </div>
                             <div class="form-footer">
                                 <p class="form-name">Biểu mẫu 5</p>
-                                <a href="">
+                                <button class="dow-btn">
                                     <i class="fa-solid fa-download"></i>
-                                </a>
+                                </button>
                             </div>
                         </div>
                         <div class="form-pdf-container">
@@ -133,9 +133,9 @@
                             </div>
                             <div class="form-footer">
                                 <p class="form-name">Biểu mẫu 6</p>
-                                <a href="">
+                                <button class="dow-btn">
                                     <i class="fa-solid fa-download"></i>
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
     <!-- Start: modal message logout -->
     <div class="modal js-message-modal">
         <div class="message-container">
-            <div class="header-messsage">
+            <div class="heading-messsage">
                 <div class="modal-closeBtn js-modal-closeBtn">
                     <i class="fa-sharp fa-regular fa-circle-xmark"></i>
                 </div>

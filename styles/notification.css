@@ -16,7 +16,8 @@
     color: #546E7A;
 }
 body {
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 #search-text {
     font: Montserrat;
@@ -72,6 +73,7 @@ body {
     display: inline-block;
     position: relative;
     text-align: center;
+    cursor: pointer;
 }
 
 #nav li a {
@@ -124,6 +126,7 @@ body {
 
 #header .lst-btn li {
     display: inline-block;
+    cursor: pointer;
 }
 
 .lst-btn li a {

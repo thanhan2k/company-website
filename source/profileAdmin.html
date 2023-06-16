@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ</title>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+    <link rel="stylesheet" href="../styles/profileAdmin.css">
+    <link rel="stylesheet"
+        href="../assets/fonts-icon/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+</head>
+
+<body onload="renderPage()">
+    <div id="main">
+        <!-- Start: header -->
+        <div id="header">
+            <!-- Begin: nav -->
+            <ul id="nav">
+                <li onclick="redirectProfilePage()"><a>Hồ sơ</a></li>
+                <li><a href="./notification.html">Thông báo</a></li>
+                <li>
+                    <a>
+                        Tài nguyên
+                        <i class="nav-arrow-down fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="./subnavDocument.html">Tài liệu</a></li>
+                        <li><a href="./subnavDevice.html">Thiết bị</a></li>
+                    </ul>
+                </li>
+                <li><a href="./jobs.html">Công việc</a></li>
+            </ul>
+            <!-- End: nav -->
+
+            <!-- Begin: button -->
+
+            <ul class="lst-btn">
+                <li class="home-icon"><a href="./home.html" title="Trang chủ">
+                        <i class="fa-solid fa-house"></i>
+                    </a></li>
+                <li class="logout-icon"><a title="Đăng xuất">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </a></li>
+                <li class="user-icon"><a href="./profile.html" title="Hồ sơ">
+                        <i class="fa-solid fa-user"></i>
+                    </a></li>
+            </ul>
+            <!-- End: button -->
+
+        </div>
+        <!-- End: header -->
+        <div id="body">
+            <!-- Start: search -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm..." id="search-input">
+                    <button class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- End: search -->
+
+            <table style="width: 100%;" class="table-header">
+                <colgroup>
+                    <col span="1" style="width: 20%;">
+                    <col span="1" style="width: 20%;">
+                    <col span="1" style="width: 20%;">
+                    <col span="1" style="width: 20%;">
+                    <col span="1" style="width: 15%;">
+                    <col span="1" style="width: 5%;">
+                </colgroup>
+                <tr>
+                    <th class="fisrt-col">Mã nhân viên</th>
+                    <th>Họ và tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Chức vụ</th>
+                    <th>Phòng ban</th>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                </tr>
+            </table>
+            <div class="scroll-table">
+                <table class="table-body" style="width: 100%;"></table>
+            </div>
+        </div>
+    </div>
+    <!-- Start: modal message logout -->
+    <div class="modal js-message-modal">
+        <div class="message-container">
+            <div class="heading-messsage">
+                <div class="modal-closeBtn js-modal-closeBtn">
+                    <i class="fa-sharp fa-regular fa-circle-xmark"></i>
+                </div>
+            </div>
+            <div class="body-message">
+                <p>Xác nhận đăng xuất?</p>
+            </div>
+            <div class="footer-message">
+                <button class="cancel-btn">Hủy bỏ</button>
+                <button class="confirm-btn">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+    <!-- End: modal message logout -->
+
+    <!-- Start: Edit modal -->
+    <div class="modal js-edit-modal admin-profile-modal">
+        <div class="modal-container modal-profile">
+            <div class="modal-closeBtn js-modal-closeBtn">
+                <i class="fa-sharp fa-regular fa-circle-xmark"></i>
+            </div>
+            <div class="modal-heading">
+                <h1>Chỉnh sửa thông tin</h1>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal--body__left">
+                    <label for="modal-name" class="modal-label">Họ và tên:</label>
+                    <input type="text" id="modal-name">
+                    <label for="modal-brithdate" class="modal-label">Ngày sinh:</label>
+                    <input type="date" id="modal-brithdate">
+                    <br>
+                    <label for="modal-brithdate" class="modal-label label-gender">Giới tính:</label>
+                    <input type="radio" name="gender" id="male" value="Nam">Nam
+                    <input type="radio" name="gender" id="female" value="Nữ">Nữ
+                    <input type="radio" name="gender" id="orther" value="khác">Khác
+                    <label class="modal-label" for="position">Chức vụ:</label>
+                    <input type="text" id="position">
+                    <label class="modal-label" for="department">Phòng ban:</label>
+                    <input type="text" id="department">
+                    <label class="modal-label" for="startDate">Ngày bắt đầu làm việc:</label>
+                    <input type="date" id="startDate">
+                    <div class="social-link-container">
+                        <h4>Liên kết ngoài:</h4>
+                        <div class="modal-social-link">
+                            <label for="modal-email">Email:</label>
+                            <input style="width: 180px;" type="text" id="modal-email">
+                        </div>
+                        <div class="modal-social-link">
+                            <label for="modal-fb">Facebook:</label>
+                            <input style="width: 156px;" type="text" id="modal-fb">
+                        </div>
+                        <div class="modal-social-link">
+                            <label for="modal-linkedIn">LinkedIn:</label>
+                            <input style="width: 162px;" type="text" id="modal-linkedin">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal--body__right">
+                    <h4>Kinh nghiệm:</h4>
+                    <div contenteditable="true" class="modal-content-experiences modal-textbox"></div>
+                    <h4>Thành tích:</h4>
+                    <div contenteditable="true" class="modal-content-achievements modal-textbox"></div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="modal-saveBtn js-modal-saveBtn">
+                    <i class="fa-regular fa-floppy-disk"></i>
+                </button>
+            </div>
+            <input type="text" id="idEmployee" style="display: none;">
+        </div>
+    </div>
+    <!-- End: modal -->
+    <script src="./js/profileAdmin.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+
+</html>

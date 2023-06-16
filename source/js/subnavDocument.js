@@ -1,3 +1,8 @@
+// lấy dữ liệu đăng nhập từ login page
+let account = JSON.parse(sessionStorage.getItem('account'));
+// lấy dữ liệu của các nhân viên trên local storage
+let employees = JSON.parse(localStorage.getItem('employees'));
+
 let headerContent = document.querySelector('.header-content');
 let formNames = document.querySelectorAll('.form-name');
 let formContents = document.querySelectorAll('.form-content');
@@ -47,3 +52,27 @@ function fillContentDocument() {
         formContents[i + formContents.length/2].innerHTML = `Tư liệu về sản phẩm ${i+1}`;
     }
 }
+
+async function downloadFile() {
+    // Tạo một đường dẫn đến tệp
+    const fileUrl = 'Bieumau1.pdf';
+    
+    // Tải xuống tệp với fetch()
+    const response = await fetch(fileUrl);
+    const blob = await response.blob();
+    
+    // Tạo một URL đến blob và sử dụng phương thức download để tải xuống tệp
+    const url = window.URL.createObjectURL(blob);
+    const downloadLink = document.createElement('a');
+    downloadLink.href = url;
+    downloadLink.download = 'Bieumau1.pdf';
+    downloadLink.click();
+  }
+
+  function showFile() {
+    // Tạo một đường dẫn đến tệp
+    const fileUrl = '../assets/filePDF/bieumau.pdf';
+    
+    // Mở tệp trong một tab mới
+    window.open(fileUrl, '_blank');
+  }

@@ -19,7 +19,7 @@
         <div id="header">
             <!-- Begin: nav -->
             <ul id="nav">
-                <li><a href="./profile.html">Hồ sơ</a></li>
+                <li onclick="redirectProfilePage()"><a>Hồ sơ</a></li>
                 <li><a href="./notification.html">Thông báo</a></li>
                 <li>
                     <a>
@@ -78,16 +78,20 @@
             <!-- End: personal description -->
         </div>
     </div>
+
+    <!-- Start: Edit button -->
     <button class="btn-edit js-btn-edit">
         <i class="fa-solid fa-pen"></i>
     </button>
+    <!-- End: Edit button -->
+
     <!-- Start: Edit modal -->
-    <div class="modal js-edit-modal">
-        <div class="modal-container">
+    <div class="modal js-edit-modal user-profile-modal">
+        <div class="modal-container modal-profile">
             <div class="modal-closeBtn js-modal-closeBtn">
                 <i class="fa-sharp fa-regular fa-circle-xmark"></i>
             </div>
-            <div class="modal-header">
+            <div class="modal-heading">
                 <h1>Chỉnh sửa thông tin</h1>
             </div>
             <div class="modal-body">
@@ -95,7 +99,7 @@
                     <label for="modal-name" class="modal-label">Họ và tên:</label>
                     <input type="text" id="modal-name">
                     <label for="modal-brithdate" class="modal-label">Ngày sinh:</label>
-                    <input type="text" id="modal-brithdate">
+                    <input type="date" id="modal-brithdate">
                     <label for="modal-brithdate" class="modal-label modal-gender">Giới tính:</label>
                     <input type="radio" name="gender" id="male" value="Nam">Nam
                     <input type="radio" name="gender" id="female" value="Nữ">Nữ
@@ -103,28 +107,29 @@
                 </div>
                 <div class="modal--body__right">
                     <h4>Kinh nghiệm:</h4>
-                    <div contenteditable="true" class="modal-content-experiences"></div>
+                    <div contenteditable="true" class="modal-content-experiences modal-textbox"></div>
                 </div>
             </div>
 
             <div class="modal-footer">
                 <h4>Liên kết ngoài:</h4>
                 <div class="modal-social-link">
-                    <label for="modal-email" class="modal-label">Email:</label>
-                    <input type="text" id="modal-email">
+                    <label for="modal-email">Email:</label>
+                    <input style="width: 204px;" type="text" id="modal-email">
                 </div>
                 <div class="modal-social-link">
-                    <label for="modal-fb" class="modal-label">Facebook:</label>
-                    <input type="text" id="modal-fb">
+                    <label for="modal-fb">Facebook:</label>
+                    <input style="width: 180px;" type="text" id="modal-fb">
                 </div>
                 <div class="modal-social-link">
-                    <label for="modal-linkedIn" class="modal-label">LinkedIn:</label>
-                    <input type="text" id="modal-linkedin">
+                    <label for="modal-linkedIn">LinkedIn:</label>
+                    <input style="width: 188px;" type="text" id="modal-linkedin">
                 </div>
                 <button class="modal-saveBtn js-modal-saveBtn">
                     <i class="fa-regular fa-floppy-disk"></i>
                 </button>
             </div>
+            <input type="text" id="idEmployee" style="display: none;">
         </div>
     </div>
     <!-- End: modal -->
@@ -132,10 +137,10 @@
     <!-- Start: modal message logout -->
     <div class="modal js-message-modal">
         <div class="message-container">
-            <div class="header-messsage">
+            <div class="heading-messsage">
                 <div class="modal-closeBtn js-modal-closeBtn">
                     <i class="fa-sharp fa-regular fa-circle-xmark"></i>
-                </div>
+                </div><q></q>
             </div>
             <div class="body-message">
                 <p>Xác nhận đăng xuất?</p>

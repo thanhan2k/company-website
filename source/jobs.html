@@ -19,7 +19,7 @@
         <div id="header">
             <!-- Begin: nav -->
             <ul id="nav">
-                <li><a href="./profile.html">Hồ sơ</a></li>
+                <li onclick="redirectProfilePage()"><a>Hồ sơ</a></li>
                 <li><a href="./notification.html">Thông báo</a></li>
                 <li>
                     <a>
@@ -64,38 +64,50 @@
             <!-- End: search -->
             <!-- Start: date filter -->
             <div class="date-filter-container">
-                <label for="date-filter">Bộ lọc ngày:</label>    
+                <label for="date-filter">Bộ lọc ngày:</label>
                 <input type="date" name="date-filter" id="date-filter">
             </div>
             <!-- End: date filter -->
             <!-- Start: job list -->
-            <table style="width: 100%;height: 200px;">
+            <table class="table-header" style="width: 100%;">
                 <colgroup>
-                    <col span="1" style="width: 100px;">
-                    <col span="1" style="width: 160px;">
-                    <col span="1" style="width: 160px;">
-                    <col span="1" style="width: 100px;">
-                    <col span="1" style="width: 160px;">
-                    <col span="1" style="width: 48px;">
+                    <col span="1" style="width: 166px;">
+                    <col span="1" style="width: 266px;">
+                    <col span="1" style="width: 266px;">
+                    <col span="1" style="width: 166px;">
+                    <col span="1" style="width: 266px;">
+                    <col span="1" style="width: 54px;">
+                    <col span="1" style="width: 54px;">
                 </colgroup>
                 <thead>
-                  <tr>
-                    <th class="fisrt-col" >Mã công việc</th>
-                    <th>Tiêu đề</th>
-                    <th>Người gửi</th>
-                    <th>Thời gian</th>
-                    <th>Trạng thái</th>
-                    <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                  </tr>
+                    <tr>
+                        <th class="fisrt-col">Mã công việc</th>
+                        <th>Tiêu đề</th>
+                        <th>Người nhận</th>
+                        <th>Thời gian</th>
+                        <th>Trạng thái</th>
+                        <th>Sửa</th>
+                        <th>Xóa</th>
+                    </tr>
                 </thead>
-                <tbody style="overflow-y: scroll;">
+            </table>
+            <div class="scroll-table">
+                <table class="table-body" style="width: 100%;">
+                    <col span="1" style="width: 169px;">
+                    <col span="1" style="width: 271px;">
+                    <col span="1" style="width: 273px;">
+                    <col span="1" style="width: 166px;">
+                    <col span="1" style="width: 266px;">
+                    <col span="1" style="width: 54px;">
+                    <col span="1" style="width: 54px;">
                     <tr>
                         <td class="fisrt-col">#KD001</td>
                         <td>Giải quyết hợp đồng</td>
                         <td>Nguyễn Văn A</td>
                         <td>9:30</td>
                         <td>Chưa xử lí</td>
-                        <td><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
+                        <td class="edit-btn js-edit-btn edit-job"><i class="fa-solid fa-pen"></i></td>
+                        <td class="del-btn js-del-btn"><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
                     </tr>
                     <tr>
                         <td class="fisrt-col">#NS001</td>
@@ -103,7 +115,8 @@
                         <td>Nguyễn Văn A</td>
                         <td>20:00</td>
                         <td>Chưa xử lí</td>
-                        <td><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
+                        <td class="edit-btn js-edit-btn edit-job"><i class="fa-solid fa-pen"></i></td>
+                        <td class="del-btn js-del-btn"><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
                     </tr>
                     <tr>
                         <td class="fisrt-col">#BGD001</td>
@@ -111,7 +124,8 @@
                         <td>Nguyễn Văn A</td>
                         <td>12:30</td>
                         <td>Chưa xử lí</td>
-                        <td><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
+                        <td class="edit-btn js-edit-btn edit-job"><i class="fa-solid fa-pen"></i></td>
+                        <td class="del-btn js-del-btn"><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
                     </tr>
                     <tr>
                         <td class="fisrt-col">#BGD001</td>
@@ -119,7 +133,8 @@
                         <td>Nguyễn Văn A</td>
                         <td>12:30</td>
                         <td>Chưa xử lí</td>
-                        <td><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
+                        <td class="edit-btn js-edit-btn edit-job"><i class="fa-solid fa-pen"></i></td>
+                        <td class="del-btn js-del-btn"><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
                     </tr>
                     <tr>
                         <td class="fisrt-col">#HC001</td>
@@ -127,7 +142,8 @@
                         <td>Nguyễn Văn A</td>
                         <td>9:30</td>
                         <td>Đã xử lí</td>
-                        <td><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
+                        <td class="edit-btn js-edit-btn edit-job"><i class="fa-solid fa-pen"></i></td>
+                        <td class="del-btn js-del-btn"><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
                     </tr>
                     <tr>
                         <td class="fisrt-col">#HC001</td>
@@ -135,7 +151,8 @@
                         <td>Nguyễn Văn A</td>
                         <td>9:30</td>
                         <td>Đã xử lí</td>
-                        <td><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
+                        <td class="edit-btn js-edit-btn edit-job"><i class="fa-solid fa-pen"></i></td>
+                        <td class="del-btn js-del-btn"><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
                     </tr>
                     <tr>
                         <td class="fisrt-col">#HC001</td>
@@ -143,7 +160,8 @@
                         <td>Nguyễn Văn A</td>
                         <td>9:30</td>
                         <td>Đã xử lí</td>
-                        <td><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
+                        <td class="edit-btn js-edit-btn edit-job"><i class="fa-solid fa-pen"></i></td>
+                        <td class="del-btn js-del-btn"><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
                     </tr>
                     <tr>
                         <td class="fisrt-col">#HC001</td>
@@ -151,31 +169,166 @@
                         <td>Nguyễn Văn A</td>
                         <td>9:30</td>
                         <td>Đã xử lí</td>
-                        <td><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
+                        <td class="edit-btn js-edit-btn edit-job"><i class="fa-solid fa-pen"></i></td>
+                        <td class="del-btn js-del-btn"><i class="fa-solid fa-circle-minus" style="color: #d50726;"></i></td>
                     </tr>
-                  <!-- more rows -->
-                </tbody>
-              </table>
+                </table>
+            </div>
             <!-- End: job list -->
         </div>
         <div id="footer">
-            <button class="jobs-created">
+            <button class="jobs-created js-jobscreated-btn">
                 Công việc đã tạo
                 <i class="fa-solid fa-right-long"></i>
             </button>
-            <button class="btn-edit js-btn-edit">
-                <i class="fa-solid fa-pen"></i>
-            </button>
-            <button class="btn-add js-btn-add">
+            <button class="add-btn js-add-btn">
                 <i class="fa-solid fa-plus"></i>
             </button>
         </div>
     </div>
 
+    <!-- Start: modad "Chi tiết công việc" -->
+    <div class="modal modal-job-details js-modal-job-details">
+        <div class="modal-container modal-job">
+            <div class="modal-heading">
+                <h1 class="modal-header">Chi tiết công việc</h1>
+                <div class="modal-closeBtn js-modal-closeBtn">
+                    <i class="fa-sharp fa-regular fa-circle-xmark"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="section-header-job">
+                    <h3>Tiêu đề</h3>
+                    <div class="box">
+                        <p>Giải quyết nhân sự</p>
+                    </div>
+                </div>
+                <div class="section-content-job">
+                    <h3>Nội dung</h3>
+                    <div class="box">
+                        <p>Phòng Nhân sự nhận được đơn xin nghỉ việc của
+                            của nhân viên trưởng phòng Nguyễn Văn A thuộc
+                            phòng Hành chính. Đơn xin nghỉ việc cần có sự
+                            xét duyệt từ Ban giám đốc. </p>
+                    </div>
+                </div>
+                <div class="section-attachmentFile-job">
+                    <h3>Tệp đính kèm</h3>
+                    <div class="box">
+                        <a href="">Donxinnghi_NguyenVanA_HC.docx</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="reply-btn js-reply-btn">
+                    Trả lời
+                    <i class="fa-solid fa-right-long"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- End: modad "Chi tiết công việc" -->
+
+    <!-- Start: modal "Trả lời công việc" -->
+    <div class="modal modal-job-answer js-modal-job-answer">
+        <div class="modal-container modal-job">
+            <div class="modal-heading">
+                <h1 class="modal-header">Trả lời công việc</h1>
+                <div class="modal-closeBtn js-modal-closeBtn">
+                    <i class="fa-sharp fa-regular fa-circle-xmark"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="section-header-job">
+                    <h3>Tiêu đề</h3>
+                    <div class="box">
+                        <p>Giải quyết nhân sự</p>
+                    </div>
+                </div>
+                <div class="section-content-job">
+                    <h3>Nội dung</h3>
+                    <div class="box">
+                        <p>Phòng Nhân sự nhận được đơn xin nghỉ việc của
+                            của nhân viên trưởng phòng Nguyễn Văn A thuộc
+                            phòng Hành chính. Đơn xin nghỉ việc cần có sự
+                            xét duyệt từ Ban giám đốc. </p>
+                    </div>
+                </div>
+                <div class="section-attachmentFile-job">
+                    <h3>Tệp đính kèm</h3>
+                    <div class="box">
+                        <a href="">Donxinnghi_NguyenVanA_HC.docx</a>
+                        <a href="">Donxetduyet.docx</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="checkbox" id="confirm">
+                <label for="confirm">Xác nhận</label>
+                <button class="modal-saveBtn js-modal-saveBtn">
+                    <i class="fa-regular fa-floppy-disk"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- End: modal "Trả lời công việc" -->
+
+    <!-- Start: modal add job && modal "edit job"-->
+    <div class="modal modal-add-job js-modal-add-job js-modal-edit-job">
+        <div class="modal-container modad-add modal-edit">
+            <div class="modal-heading">
+                <h1 class="modal-header"></h1>
+                <div class="modal-closeBtn js-modal-closeBtn">
+                    <i class="fa-sharp fa-regular fa-circle-xmark"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="body-left">
+                    <div class="section-header-job">
+                        <h3>Tiêu đề</h3>
+                        <div class="box" contenteditable="true">
+                            <p>Giải quyết nhân sự</p>
+                        </div>
+                    </div>
+                    <div class="section-content-job" >
+                        <h3>Nội dung</h3>
+                        <div class="box" contenteditable="true">
+                            <p>Phòng Nhân sự nhận được đơn xin nghỉ việc của
+                                của nhân viên trưởng phòng Nguyễn Văn A thuộc
+                                phòng Hành chính. Đơn xin nghỉ việc cần có sự
+                                xét duyệt từ Ban giám đốc. </p>
+                        </div>
+                    </div>
+                    <div class="section-attachmentFile-job">
+                        <h3>Tệp đính kèm</h3>
+                        <div class="box">
+                            <a href="">Donxinnghi_NguyenVanA_HC.docx</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-right">
+                    <h3>Người nhận</h3>
+                    <select name="receiver" id="receiver">
+                        <option value="#KD001">Nguyễn Văn A</option>
+                        <option value="#KD001">Nguyễn Văn B</option>
+                        <option value="#KD001">Nguyễn Văn C</option>
+                        <option value="#KD001">Nguyễn Văn D</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-saveBtn js-modal-saveBtn">
+                    <i class="fa-regular fa-floppy-disk"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- End: modal add jobs -->
+
     <!-- Start: modal message logout -->
     <div class="modal js-message-modal">
         <div class="message-container">
-            <div class="header-messsage">
+            <div class="heading-messsage">
                 <div class="modal-closeBtn js-modal-closeBtn">
                     <i class="fa-sharp fa-regular fa-circle-xmark"></i>
                 </div>
@@ -192,6 +345,7 @@
     <!-- End: modal message logout -->
 
     <script src="./js/header.js"></script>
+    <script src="./js/jobs.js"></script>
 </body>
 
 </html>
